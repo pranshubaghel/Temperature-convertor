@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: cadetblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .main {
+            border: 2px solid lime;
+            height: 400px;
+            width: 500px;
+            margin-top: 10rem;
+        }
+
+        button {
+            background-color: brown;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Degree Calculator</h1>
+
+        CONVERT: <input type="number" id="convert">
+        <button onclick="celcToFahr()">Convert</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+
+        function celcToFahr() {
+
+            let deg = document.getElementById("convert").value;
+            let temp = (deg * 9 / 5) + 32;
+            // document.write(temp);
+
+            document.getElementById("result").innerHTML = `${deg} Celsius is equal to ${temp} Fahrenheit.`;
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
